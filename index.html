@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ecommerce</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>PinkFlash</h1>
+    <nav>
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('products')">Product</a>
+      <a href="#" onclick="showSection('tentang')">Tentang</a>
+      <a href="#" onclick="showSection('cart')">Payment</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+      <span class="cart-icon" onclick="showSection('cart')">🛒 <span id="cart-count">0</span></span>
+    </nav>
+  </header>
+
+  <section id="home" class="section active">
+    <div class="hero">
+      <h2>Selamat Datang di PinkFlash!</h2>
+      <h2>by.Uinna Store.</h2>
+      <img src="https://i.pinimg.com/736x/b8/76/20/b87620b7b0b944d527d070c6baf0f47c.jpg" alt="PinkFlash Logo" class="logo-banner">
+      <p>Tampil Percaya Diri dengan PinkFlash 💄✨</p>
+      <p>Produk Make Up Affordable!!!</p>
+      <button onclick="showSection('products')">Belanja Sekarang</button>
+    </div>
+  </section>
+<section id="products" class="section">
+  <h2 style="text-align:center">Produk PinkFlash</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="images/lipcream.jpg" alt="Lip Cream" />
+      <h3>Lip Cream</h3>
+       <p>
+      Lip cream PinkFlash memiliki hasil akhir matte yang ringan di bibir, tidak membuat kering,
+      cocok digunakan sehari-hari oleh remaja maupun dewasa muda.
+    </p>
+      <p>Rp 14.000</p>
+      <a href="produk-lipcream.html"><button>Detail</button></a>
+    </div>
+    <div class="product-card">
+      <img src="images/lipgloss.jpg" alt="Lip Gloss" />
+      <h3>Lip Gloss</h3>
+      <p>Lip gloss memberikan kilau natural dan lembut di bibir tanpa rasa lengket.</p>
+      <p>Rp 19.000</p>
+      <a href="produk-lipgloss.html"><button>Detail</button></a>
+    </div>
+    <div class="product-card">
+      <img src="images/eyeshadow.jpg" alt="Eyeshadow" />
+      <h3>Eyeshadow</h3>
+      <p>Palet eyeshadow warna natural dan bold, cocok untuk tampilan glam dan kasual.</p>
+      <p>Rp 69.000</p>
+      <a href="produk-eyeshadow.html"><button>Detail</button></a>
+    </div>
+    <div class="product-card">
+      <img src="images/blush.jpg" alt="Blush On" />
+      <h3>Blush On</h3>
+      <p>Blush on powder lembut dengan pilihan warna peach dan pink cerah.</p>
+      <p>Rp 25.000</p>
+      <a href="produk-blush.html"><button>Detail</button></a>
+    </div>
+    <div class="product-card">
+      <img src="images/highlighter.jpg" alt="Highlighter" />
+      <h3>Highlighter</h3>
+      <p>Highlighter glowing lembut untuk pipi, hidung, dan area highlight wajah.</p>
+      <p>Rp 25.000</p>
+      <a href="produk-highlighter.html"><button>Detail</button></a>
+    </div>
+    <div class="product-card">
+      <img src="images/mascara.jpg" alt="Mascara" />
+      <h3>Mascara</h3>
+      <p>Maskara waterproof untuk tampilan lentik dan tahan lama sepanjang hari.</p>
+      <p>Rp 28.000</p>
+      <a href="produk-mascara.html"><button>Detail</button></a>
+    </div>
+    <div class="product-card">
+      <img src="images/eyeliner.jpg" alt="Eyeliner" />
+      <h3>Eyeliner</h3>
+      <p>Eyeliner cair cepat kering, tahan lama, dan mudah diaplikasikan.</p>
+      <p>Rp 16.000</p>
+      <a href="produk-eyeliner.html"><button>Detail</button></a>
+    </div>
+  </div>
+</section>
+
+
+  <section id="tentang" class="section">
+  <h2>💕 Tentang Kami – PinkFlash</h2>
+  <p>PinkFlash adalah brand kecantikan yang hadir untuk menjawab kebutuhan generasi muda yang ingin tampil percaya diri, stylish, dan ekspresif tanpa harus mengeluarkan biaya besar.
+Kami percaya bahwa makeup bukan hanya soal penampilan, tapi juga cara mengekspresikan diri. Karena itu, semua produk kami dirancang dengan warna-warna yang trendi, formula yang ringan, dan harga yang terjangkau — cocok untuk pelajar, mahasiswa, maupun pemula yang baru mulai belajar makeup.
+Dengan semangat "Simple but On Fleek", kami berkomitmen untuk menghadirkan produk berkualitas tinggi, cruelty-free, dan selalu relevan dengan gaya hidup Gen Z masa kini.</p>
+</section>
+
+
+<section id="cart" class="section">
+    <h2>Keranjang Belanja</h2>
+    <div id="cart-items"></div>
+    <p><strong>Total:</strong> <span id="cart-total">Rp 0</span></p>
+    <h3>Metode Pembayaran</h3>
+    <form id="payment-form">
+      <label><input type="radio" name="payment-method" value="Transfer Bank" required /> Transfer Bank</label><br />
+      <label><input type="radio" name="payment-method" value="COD" /> Bayar di Tempat (COD)</label><br />
+      <label><input type="radio" name="payment-method" value="E-Wallet" /> E-Wallet (OVO, Dana, dll)</label><br />
+      <button type="submit">Lanjutkan Pembayaran</button>
+    </form>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Kontak & Sosial Media</h2>
+    <p><strong>Email:</strong> <a href="mailto:pinkflash@beauty.com">pinkflash@beauty.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/pinkflash.id" target="_blank">@pinkflash.id</a></p>
+    <p><strong>TikTok:</strong> <a href="https://tiktok.com/@pinkflash_beauty" target="_blank">@pinkflash_beauty</a></p>
+  <form>
+  <label for="nama">Nama:</label><br>
+  <input type="text" id="nama" name="nama" required><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="pesan">Pesan:</label><br>
+  <textarea id="pesan" name="pesan" required></textarea><br><br>
+
+  <button type="submit">Kirim</button>
+</form>
+  </section>
+
+  <footer>
+    <p>© 2025 PinkFlash Store. Dibuat oleh Wina Mustika Sundani</p>
+  </footer>
+</body>
+</html>
