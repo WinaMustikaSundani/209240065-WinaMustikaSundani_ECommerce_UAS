@@ -1,0 +1,249 @@
+/* Responsive Navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .logo-banner {
+    width: 80%;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Global Styles */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  background-color: #fff0f8;
+  color: #333;
+}
+
+header {
+  background-color: #ff69b4;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #ff69b4;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.section {
+  display: none;
+  padding: 1rem;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #ffc1e3, #ffe6f0);
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  color: #c2185b;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #6a1b9a;
+}
+
+.hero img.logo-banner {
+  width: 200px;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hero button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #e91e63;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product-card {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.1rem;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #d81b60;
+}
+
+.product-card button {
+  margin-top: 0.5rem;
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* Sosial Media */
+.sosmed a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 0.9rem;
+}
+
+/* Responsive untuk Mobile */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .product-card {
+    font-size: 0.9rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Ikon Keranjang */
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+/* Halaman Produk Terpisah */
+.produk-detail {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff0f8;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.produk-detail img.produk-gambar {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.produk-detail button {
+  background-color: hotpink;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.produk-detail button:hover {
+  background-color: deeppink;
+}
